@@ -1,7 +1,9 @@
 /*
  * Copyright [2020 - 2020] Confluent Inc.
  */
+
 package io.confluent.connect.jdbc.dialect;
+
 import io.confluent.connect.jdbc.dialect.DatabaseDialectProvider.SubprotocolBasedProvider;
 import io.confluent.connect.jdbc.sink.metadata.SinkRecordField;
 import org.apache.kafka.common.config.AbstractConfig;
@@ -19,7 +21,7 @@ public class YellowbrickDatabaseDialect extends PostgreSqlDatabaseDialect {
 
   public static class Provider extends SubprotocolBasedProvider {
     public Provider() {
-      super(YellowbrickDatabaseDialect.class.getSimpleName(), "redshift");
+      super(YellowbrickDatabaseDialect.class.getSimpleName(), "yellowbrick");
     }
 
     public DatabaseDialect create(AbstractConfig config) {
